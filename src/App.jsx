@@ -4,15 +4,15 @@ import appFirebase from "../src/credenciales";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importa Router, Route y Routes
+import React, { Suspense, useState, useEffect } from 'react'; // Importa Suspense para el Lazy Loading
 
 // Obtiene la autenticación mediante las credenciales
 const auth = getAuth(appFirebase);
 
-// Obtener otros módulos
-import Home from "../src/Components/Home";
-import Login from "../src/Components/Login";
-import { useState, useEffect } from 'react';
-import Register from './Components/Register';
+// Importación diferida (Lazy Loading) de los componentes
+const Home = React.lazy(() => import('../src/Components/Home'));
+const Login = React.lazy(() => import('../src/Components/Login'));
+const Register = React.lazy(() => import('./Components/Register'));
 
 function App() {
   const [usuario, setUsuario] = useState(null);
@@ -35,12 +35,15 @@ function App() {
 
   return (
     <Router basename="/alzhividaWeb">
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/login" element={<Login />} /> 
-        <Route path="/register" element={<Register />} />
-        <Route path="/home" element={usuario ? <Home correoUsuario={usuario.email} /> : <Login />} />
-      </Routes>
+      {/* Suspense muestra un "loading" mientras se cargan componentes diferidos */}
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/login" element={<Login />} /> 
+          <Route path="/register" element={<Register />} />
+          <Route path="/home" element={usuario ? <Home correoUsuario={usuario.email} /> : <Login />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }
