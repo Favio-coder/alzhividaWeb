@@ -1,15 +1,19 @@
-//import { defineConfig } from 'vite'
-//import react from '@vitejs/plugin-react'
-
-// https://vitejs.dev/config/
-//export default defineConfig({
-//  plugins: [react()],
-//})
-
+// vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/alzhividaWeb/', // Cambia esto al nombre exacto de tu repositorio
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
+        }
+      }
+    },
+    chunkSizeWarningLimit: 800 // Aumenta el límite para los warnings si lo consideras necesario
+  }
 });
