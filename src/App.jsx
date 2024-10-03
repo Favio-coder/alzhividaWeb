@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/alzhividaWeb">
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<Login />} /> 
