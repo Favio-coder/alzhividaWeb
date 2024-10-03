@@ -1,0 +1,35 @@
+/* styles.css */
+.navbar-link-custom {
+    color: #a477ff !important; /* Cambiar al color deseado */
+}
+
+/* src/Components/Styles/HeaderComponent.css */
+.header {
+    border-radius: 10px; /* Borde redondeado */
+    margin: 2rem; /* Margen para pantallas grandes */
+}
+
+@media (max-width: 768px) { /* Para dispositivos móviles */
+    .header {
+        margin: 0.5rem; /* Margen reducido para dispositivos móviles */
+    }
+}
+
+/* src/Styles/HeaderComponent.css */
+/* src/Styles/HeaderComponent.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color gris semitransparente */
+    z-index: 998; /* Asegurarse de que esté por debajo de la cabecera */
+    display: none; /* Ocultar por defecto */
+}
+
+.overlay.show {
+    display: block; /* Mostrar la capa cuando la hamburguesa está abierta */
+}
+
+

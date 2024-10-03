@@ -1,0 +1,17 @@
+body {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina relleno predeterminado */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total de los elementos */
+    font-family: Arial, sans-serif; /* O cualquier otra fuente que prefieras */
+    background-color: #ffffff; /* O el color de fondo que desees */
+    color: #000000; /* Color de texto predeterminado */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    line-height: 1.5; /* Mejora la legibilidad del texto */
+}
+
+/* Asegúrate de que todos los elementos tengan el box-sizing establecido */
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Aplica box-sizing a todos los elementos */
+}

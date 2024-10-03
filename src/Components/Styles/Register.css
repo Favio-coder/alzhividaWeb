@@ -1,0 +1,60 @@
+/* Styles/Register.css */
+
+.login-container {
+    max-width: 500px; /* Max width for larger screens */
+    margin: 15rem auto 50px; /* Margen superior de 5 rem y centrado horizontalmente */
+    padding: 20px; /* Padding around the form */
+    border: 1px solid #ccc; /* Border for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff; /* Background color */
+    min-height: 5rem; /* Altura mínima de 5 rem */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.btn.custom-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text color */
+}
+
+.btn.custom-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+    .login-container {
+        padding: 15px; /* Less padding on small screens */
+    }
+}
+
+/* Avatar Styles */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.avatar {
+    width: 100px; /* Ajusta el tamaño del avatar */
+    height: 100px; /* Ajusta el tamaño del avatar */
+    border-radius: 50%; /* Hacer que sea circular */
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+}
+
+/* Form Register Styles */
+.form-register {
+    margin-top: 40px; /* Separación entre el encabezado y el formulario */
+    padding: 20px; /* Añadir un poco de padding para mejorar el diseño */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fff; /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de profundidad */
+}
+
+/* Ajustes adicionales para mayor separación */
+h2 + .form-register {
+    margin-top: 40px; /* Espacio adicional solo para el formulario */
+}

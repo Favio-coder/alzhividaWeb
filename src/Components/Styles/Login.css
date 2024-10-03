@@ -1,0 +1,43 @@
+body {
+    margin: 0; /* Elimina márgenes predeterminados */
+    height: 100vh; /* Asegura que el body tenga altura total */
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    background-color: #cfbcf5;
+}
+
+.login-container {
+    
+    width: 100%; /* Asegura que ocupe el ancho completo */
+    max-width: 400px; /* Establece un ancho máximo para el formulario */
+    padding: 20px; /* Puedes ajustar el padding según sea necesario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: white; /* Fondo blanco para el formulario */
+}
+
+
+.custom-btn {
+    background-color: #8c52ff; 
+    color: #fff; 
+    border: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.custom-btn:hover {
+    color: #fff; 
+    background-color: #5328a8; 
+}
+
+.nav-link {
+    color: #8c52ff; /* Color inicial del enlace */
+    text-decoration: none; /* Sin subrayado por defecto */
+    transition: color 0.3s, text-decoration 0.3s; /* Suavizar la transición del color y subrayado */
+}
+
+.nav-link:hover {
+    color: #5328a8; /* Color del enlace al pasar el ratón */
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
